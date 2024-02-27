@@ -149,6 +149,36 @@ function init() {
     }
   }
 
+  // function onSelectEnd() {
+  //   if (count > 2) {
+
+  //     const startPos = sphereMesh.position.clone();
+  //     const raycaster = new THREE.Raycaster();
+  //     raycaster.setFromCamera({ x: 0, y: 0 }, camera);
+  //     const direction = new THREE.Vector3();
+  //     raycaster.ray.direction.copy(direction);
+
+  //     const length = 10;
+  //     raycaster.ray.origin.copy(controller.position);
+  //     raycaster.ray.origin.add(direction.multiplyScalar(length));
+
+  //     const intersects = raycaster.intersectObjects(scene.children, true);
+
+  //     let endPos;
+  //     if (intersects.length > 0) {
+  //       endPos = intersects[0].point;
+  //     } else {
+  //       endPos = raycaster.ray.origin.clone().add(direction.multiplyScalar(length));
+  //     }
+
+  //     const directionFinal = new THREE.Vector3().subVectors(startPos, endPos).normalize();
+
+  //     sphereBody.applyImpulse(directionFinal.multiplyScalar(10), sphereBody.position);
+
+  //     sphereMesh.material.color.set(0x0000ff);
+  //   }
+  // }
+
   function onSelectEnd() {
     if (count > 2) {
       const startPos = sphereMesh.position.clone();
